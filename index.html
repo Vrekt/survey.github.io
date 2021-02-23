@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Forms Project 2/22/2021</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="outer-shape" id="main">
+    <div class="inner-content">
+        <img src="example.png" alt="logo" class="img-center">
+        <h1 style="font-size: 24px" class="general-text">Example Survey</h1>
+        <p class="general-text">Here is an example survey built for fun. I really need to think of a good idea for an
+            actual survey.</p>
+
+        <form action="ty.html">
+        <!-- Name -->
+        <label class="general-text required" for="firstname">First name</label><br>
+        <!-- https://stackoverflow.com/questions/25402749/how-to-apply-padding-to-an-html-input-element -->
+        <span class="general-text">
+             <input type="text" id="firstname" name="firstname" placeholder="John" required>
+                <br>
+
+        </span>
+        <br>
+        <label class="general-text required" for="lastname">Last name</label><br>
+        <span class="general-text">
+            <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+        </span>
+
+        <!-- Gender -->
+        <div class="question-1">
+            <p class="general-text required">What is your gender</p>
+            <span class="general-text">
+                <input type="radio" id="male" name="gender" required>
+            </span>
+            <label class="other-text" for="male">Male</label><br>
+            <span class="general-text">
+                <input type="radio" id="female" name="gender" required>
+            </span>
+            <label class="other-text" for="female">Female</label><br>
+            <span class="general-text">
+            <input type="radio" id="other" name="gender" required>
+            </span>
+            <label class="other-text" for="other">Other</label>
+        </div>
+
+        <!-- Enjoy programming? -->
+        <div class="question-2">
+            <p class="general-text required">Do you enjoy programming?</p>
+            <span class="general-text">
+                <input type="radio" id="yes" name="yesno" required>
+            </span>
+            <label class="other-text" for="yes">Yes</label><br>
+            <span class="general-text">
+                <input type="radio" id="no" name="yesno" required>
+            </span>
+            <label class="other-text" for="no">Not really</label>
+        </div>
+        <br>
+        <div class="question-3">
+            <label class="general-text required" for="hobbies">What are your hobbies?</label><br>
+            <span class="general-text">
+            <input type="text" id="hobbies" name="hobbies" placeholder="Skating, Dancing, Designing, Etc" required>
+        </span>
+        </div>
+
+        <div class="question-4">
+            <p class="general-text required">You can only have one for the rest of your life!</p>
+            <span class="general-text">
+                <input type="radio" id="reeses" name="candy" required>
+            </span>
+            <label class="other-text" for="reeses">Reeses</label><br>
+            <span class="general-text">
+                <input type="radio" id="butterfinger" name="candy" required>
+            </span>
+            <label class="other-text" for="butterfinger">Butterfinger</label><br>
+
+            <span class="general-text">
+                <input type="radio" id="spree" name="candy" required>
+            </span>
+            <label class="other-text" for="spree">Spree</label><br>
+            <span class="general-text">
+                <input type="radio" id="laffytaffy" name="candy" required>
+            </span>
+            <label class="other-text" for="laffytaffy">Laffy Taffy</label><br>
+        </div>
+
+        <br>
+
+            <span class="general-text">
+             <input type="submit">
+        </span>
+
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function onClick() {
+        // location.href='ty.html'
+        $("button").click(function(e)
+        {
+            if(!jquery.validate())
+                e.preventDefault();
+        });
+    }
+</script>
+</body>
+</html>
